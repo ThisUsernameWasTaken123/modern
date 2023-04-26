@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+.lightbulb {
+  position:relative;
+  display:inline-block;
+  top:3px;
+  left:10px;
+  width:50px;
+  position: relative;
+}
+body {
+  background-image:url("pexels.png");
+  background-size:cover;
+  background-color: black;
+}
+.web-text{
+  color:white;
+  position: relative;
+  display: inline-block;
+  bottom:8px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  top:1px;
+  left:10px;
+  font-size:25px;
+}
+
+.header {
+  position:relative;
+  width:10000px;
+  bottom:9px;
+  right:10px;
+  background:grey;
+}
+
+.box-text{
+  color:black;
+  font-family: "Ubuntu";
+}
+.box {
+  z-index: 2;
+  position: relative;
+  left:800px;
+  width: 400px;
+  height: 400px;
+  padding-top:5px;
+  padding-left:10px;
+  padding-right:px;
+  background-color: rgb(189, 189, 189);
+  opacity: 0;
+  border-radius: 10px;
+}
+
+@keyframes fade-in-move-up-down {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity:0;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+}
+
+.hover-link {
+  z-index: 1;
+  position:relative;
+  top:1px;
+  bottom:8px;
+  left:700px;
+  padding-bottom: 10px;
+  display:inline-block;
+  margin:0;
+  color:white;
+}
+.hover-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.hover-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+a {
+  color:white;
+}
+
+.hover-link:hover {
+  cursor:pointer;
+}
+
+.hover-link:hover +.box {
+  animation: fade-in-move-up-down 2s forwards;
+}
+
+.hover-link:not(:hover) +.box{
+  animation: fade-out 2s backwards;
+}
+
+.header-text {
+  z-index: 1;
+  position:relative;
+  font-family:"Ubuntu";
+  color:white;
+  font-weight: 500;
+  font-size:130px;
+  bottom:410px;
+  left:230px;
+  display:inline-block;
+  background-image: url('pexels.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header2-text {
+  z-index: 1;
+  position:relative;
+  font-family:"Ubuntu";
+  color:white;
+  font-weight: 400;
+  font-size:50px;
+  bottom:580px;
+  left:310px;
+  width:800px;
+}
+
+.other-text {
+  z-index: 1;
+  position:relative;
+  top:px;
+  bottom:687px;
+  left:1010px;
+  padding-bottom: 20px;
+  display:inline-block;
+  margin:0;
+  padding-bottom:10px;
+  color:white;
+}
+
+.other-text:hover {
+  cursor:pointer;
+}
+.other-text:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.other-text:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
